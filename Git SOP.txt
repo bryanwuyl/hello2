@@ -8,7 +8,8 @@
 想要在 Windows 系統上使用 Notepad++ 做為編輯器
 	$ git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
 產生ssh key
-	$ ssh-keygen			//會產生公鑰及私鑰；pubkey需上傳至github作為個人帳號憑證，否則無法push/pull
+	$ ssh-keygen				//會產生公鑰及私鑰；pubkey需上傳至github作為個人帳號憑證，否則無法push/pull
+								  完成ssh key生成後，可透過顯示路徑找到此public key所存放之位置
 	$ cat ~/.ssh/id_rsa.pub		//由此查看公鑰內容，或由資料夾查看亦可
 
 
@@ -22,37 +23,47 @@
 	
 ==========STEP 3 : clone (repo)
 	**be added into repo		//提供github給管理者，收到邀請通知後完成接受
-	**add new folder		//建立欲指定的資料夾，並由此開啟git bash
+	**add new folder			//建立欲指定的資料夾，並由此開啟git bash
 	$ git clone [ssh link]		//完成接收後，可於github中看到該repo，複製ssh連結並下指令在git上
-	**clone complete		//完成clone。此後可在本地修改檔案，並依步驟push至hub上
+	**clone complete			//完成clone。此後可在本地修改檔案，並依步驟push至hub上
 	
-	$ git status			//可以讓我們觀看目前的 repo
-	$ git add .			//預存，增加檔案
+	$ git status				//可以讓我們觀看目前的 repo
+	$ git add .					//預存，增加檔案
 	$ git commit -m 'xxxx'		//進行提交, -m 後面輸入的內容是本次修改 ( 送出 ) 的說明, 盡量輸入一眼就可以看出這次送出修改了什麼的內容 ( 方便以後回去觀看能快速了解此次 commit 修改了什麼 )
-	$ git commit  			//進行提交，這時會跳出編輯視窗，輸入完先按 Esc鍵 ，按完後底下的 INSERT 會消失，接著直接打 :wq ，再按 enter 就會儲存並離開了。
+	$ git commit  				//進行提交，這時會跳出編輯視窗，輸入完先按 Esc鍵 ，按完後底下的 INSERT 會消失，接著直接打 :wq ，再按 enter 就會儲存並離開了。
 	$ git commit --amend		//編輯你上一次的 commit 內容
 	$ git push
-	$ git log			//版本紀錄，按小寫q 可退出
+	$ git log					//版本紀錄，按小寫q 可退出
 	$ git log --pretty=oneline	//版本紀錄一次一行
 	
 ==========STEP 4 : 建立repo
-	$ git init			//這個命令將會建立一個名為 .git 的子資料夾，其中包含 Git 所有必需的倉儲檔案
-	$ git status			//可以讓我們觀看目前的 repo
-	$ git add .			//預存，把現有的檔案都預存到該repo
-	$ git commit -m 'xxxx'		//提交
-	$ git commit  			//提交
+	$ git init					//這個命令將會建立一個名為 .git 的子資料夾，其中包含 Git 所有必需的倉儲檔案
+	$ git status				//可以讓我們觀看目前的 repo
+	$ git add .					//預存，把現有的檔案都預存到該repo
+	$ git commit -m "xxxx"		//提交
+	$ git commit  				//提交
 	**開啟github
-	**新增repo			//Your repository\new\ *<Repository name> *<Private> \Create repository
-	**複製remote指令			//from …or create a new repository on the command line
-					  ex. git remote add origin https://github.com/bryanwuyl/test1.git
-	$ git remote			//打開始新增的資料夾，打開git bash，把剛才於github repo中複製的remote指令貼上
+	**新增repo					//Your repository\new\ *<Repository name> *<Private> \Create repository
+	**複製remote指令				//from …or create a new repository on the command line
+								  ex. git remote add origin https://github.com/bryanwuyl/test1.git
+	$ git remote				//打開始新增的資料夾，打開git bash，把剛才於github repo中複製的remote指令貼上
 	$ git push orgin master		//完成push
-								  
+
+==========STEP 5 : 誤刪檔案或回復版本
+								//未透過add存入暫存區(stage)
+	$ git check out .			//檔案會回到本地
 	
-	
+								//檔案已add進暫存區(無論有無push至hub上)
+	$ git log					//找到要回復的版本號。每個log commit後方的流水號即是版本號
+	$ git revert -n xxxx		//將版本回復到要回復的版本號
+	$ git status				//非必要。查看目前git的狀態
+	$ git add .					//預存，把現有的檔案都預存到該repo
+	$ git commit -m "xxxx"		//提交
+	$ git push
+		
 ///////////Github setup///////////
-	sign up				//申請個人帳號密碼，並完成驗證
-	SSH keys			//加入公鑰。settings\SSH and GPG keys\SSH keys(New SSH key)。貼上公鑰資訊
+	sign up						//申請個人帳號密碼，並完成驗證
+	SSH keys					//加入公鑰。settings\SSH and GPG keys\SSH keys(New SSH key)。貼上公鑰資訊
 	
 	
 	
