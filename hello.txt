@@ -1,2 +1,18 @@
 我的全新的hello
 再加一次內容
+
+<<<<<<< HEAD
+1: roger
+2 :george
+=======
+<<<<<<< HEAD
+20240304_bryan
+=======
+1: roger
+>>>>>>> e74e99d8975a33b1a544d7cb11c05bff5cdcce3f
+<<<<<<< HEAD
+simon test
+
+=======
+>>>>>>> 054f2bc127c40cd66d01efe98f9b9e6f9a503524
+>>>>>>> 6dcbcb3956de13a7bbd9b9c2b907a21e851540ec
