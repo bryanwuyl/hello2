@@ -39,6 +39,8 @@
     $ git push
     $ git log                    //版本紀錄，按小寫q 可退出
     $ git log --pretty=oneline   //版本紀錄一次一行
+	$ git log --pretty=oneline <file>
+	                             //針對某特定版本的log檔
     
 ==========STEP 4 : 建立repo
     $ git init                   //這個命令將會建立一個名為 .git 的子資料夾，其中包含 Git 所有必需的倉儲檔案
