@@ -117,11 +117,8 @@
 ///////////Github setup///////////
     sign up                      //申請個人帳號密碼，並完成驗證
     SSH keys                     //加入公鑰。settings\SSH and GPG keys\SSH keys(New SSH key)。貼上公鑰資訊
-
-///////////GitKraken//////////////
-    破解參考                      //https://github.com/qsshs/GitKraKen-Crack?tab=readme-ov-file
-    使用參考                      //https://www.youtube.com/watch?v=ceT3pm5hYvs
- 
     
-   
+    
+    
+    
     

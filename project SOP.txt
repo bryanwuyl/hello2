@@ -1,0 +1,30 @@
+///////////Project DSN Design SOP///////////
+
+==========STEP 1 : 建立全新Repository
+# 1 主要owner負責create Github repo，並提供clone SSH給相關人員
+# 2 repo中需建立專案線路及協同人員之資料夾
+    ex. ProjectName/ Schematic/ Bryan Simon Roger George
+# 3 線路檔案需包含.dsn及.pdf檔，並置於線路(Schematic)資訊夾中最上層
+# 4 上傳檔名原則:
+    ProjectName_BoardName_Master.dsn
+    ProjectName_BoardName_Master.pdf
+	
+==========STEP 2 : 專案人員上傳
+# 1 進入個人之資料夾，以個人專屬檔名上傳線路，檔名命名原則 ProjectName_BoardName_XX.dsn
+    ProjectName_BoardName_BW.dsn     > Bryan
+    ProjectName_BoardName_SH.dsn     > Simon
+    ProjectName_BoardName_RS.dsn     > Roger  
+	ProjectName_BoardName_GC.dsn     > George
+# 2 如有其餘檔案需上傳，可視情況新增資料夾於專案下，或置於個人資料夾中
+# 3
+
+==========STEP 3 : 上傳commit
+# 1 Commit依照以下格式書寫，以利log查找
+    XX_概述上傳事由                  > XX=BW/SH/RS/GC
+# 2 Commit以個人修改之文件逐一書寫，
+    $ git commit -m "事由" <文件名>  > $ git commit -m "BW_init" Hello_MB_Master.txt
+	
+==========STEP 4 : 注意事項
+# 1 非必要時，請勿使用reset指令，會使repo回到指定狀態，並無法輕易看到修改log
+
+
