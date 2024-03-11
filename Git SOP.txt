@@ -67,9 +67,12 @@
     
 
 ==========STEP 6 : 誤刪檔案或回復版本
+                                 //未透過add存入暫存區(stage)，使用restore
+    $ git restore .\hello.txt    //檔案會回到修改前的版本，無論是修改或刪除
+
                                  //未透過add存入暫存區(stage)
     $ git check out .            //檔案會回到本地
-    
+	    
                                  //檔案已add進暫存區(無論有無push至hub上)
     $ git log                    //找到要回復的版本號。每個log commit後方的流水號即是版本號ID
     $ git revert -n xxxx         //將版本回復到要回復的版本號
@@ -95,7 +98,7 @@
     $ git branch                 //檢索目前所有分支。帶星號為目前分支所在地
     $ git branch dev             //創建dev分支
     $ git switch dev             //將目前分支所在處移至dev
-    **在分支所在處新增檔案       //echo dev1 > dev1.txt (需在dev分支下建立檔案)
+    **在分支所在處新增檔案         //echo dev1 > dev1.txt (需在dev分支下建立檔案)
     $ git add .                  //預存，把現有的檔案都預存到該repo
     $ git commit -m "xxxx"       //提交。新增之檔案即掛至該分支下
     $ git switch master          //將所在地移至master；此時會新增在分支下的檔案會被隱藏
@@ -104,10 +107,7 @@
                                  //查看分支圖
     $ git branch -d dev          //刪除其分支(已完成合併)
     $ git branch -D dev          //刪除其分支(未完成合併，強制刪除)
-
-    
-    
-    
+   
 
 
 ==========others
@@ -117,8 +117,11 @@
 ///////////Github setup///////////
     sign up                      //申請個人帳號密碼，並完成驗證
     SSH keys                     //加入公鑰。settings\SSH and GPG keys\SSH keys(New SSH key)。貼上公鑰資訊
+
+///////////GitKraken//////////////
+    破解參考                      //https://github.com/qsshs/GitKraKen-Crack?tab=readme-ov-file
+    使用參考                      //https://www.youtube.com/watch?v=ceT3pm5hYvs
+ 
     
-    
-    
-    
+   
     
